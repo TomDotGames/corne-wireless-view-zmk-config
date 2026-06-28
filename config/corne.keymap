@@ -173,10 +173,10 @@
 
             display-name = "Base";
             bindings = <
-&kp GRAVE   &kp Q  &kp W                     &kp F                  &kp P                       &kp B        &kp J    &kp L                         &kp U                   &kp Y                       &none         &none
-&kp DELETE  &kp A  &homerow_left LEFT_ALT R  &homerow_left LCTRL S  &homerow_left LEFT_SHIFT T  &kp G        &kp M    &homerow_right RIGHT_SHIFT N  &homerow_right RCTRL E  &homerow_right RIGHT_ALT I  &kp O         &none
-&kp CAPS    &kp Z  &kp X                     &kp C                  &kp D                       &kp V        &kp K    &kp H                         &kp COMMA               &kp DOT                     &kp QUESTION  &none
-                                             &kp LGUI               &mo 1                       &kp SPACE    &kp RET  &mo 0                         &tap_caps
+&kp GRAVE   &kp Q  &kp W                     &kp F                  &kp P                       &kp B                  &kp J    &kp L                         &kp U                   &kp Y                       &none         &none
+&kp DELETE  &kp A  &homerow_left LEFT_ALT R  &homerow_left LCTRL S  &homerow_left LEFT_SHIFT T  &kp G                  &kp M    &homerow_right RIGHT_SHIFT N  &homerow_right RCTRL E  &homerow_right RIGHT_ALT I  &kp O         &none
+&kp CAPS    &kp Z  &kp X                     &kp C                  &kp D                       &kp V                  &kp K    &kp H                         &kp COMMA               &kp DOT                     &kp QUESTION  &none
+                                             &kp LGUI               &thumb_mod 3 BACKSPACE      &thumb_mod 4 ESCAPE    &kp RET  &thumb_mod 2 SPACE            &tap_caps
             >;
         };
 
@@ -229,6 +229,15 @@
 &trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans    &trans    &trans     &trans    &trans  &trans  &trans  &trans  &trans  &trans
                           &trans    &trans     &trans    &trans  &trans  &trans
+            >;
+        };
+
+        layer_6 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
