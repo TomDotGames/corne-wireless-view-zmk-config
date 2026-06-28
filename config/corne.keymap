@@ -154,6 +154,11 @@
             bindings = <&kp DOUBLE_QUOTES>;
             key-positions = <15 3>;
         };
+
+        special {
+            bindings = <&sl 1>;
+            key-positions = <0 11>;
+        };
     };
 
     keymap {
@@ -175,14 +180,14 @@
             >;
         };
 
-        lower_layer {
+        special {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
             // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
             // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
-            display-name = "Lower";
+            display-name = "special";
             bindings = <
 &kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &kp BSPC
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
@@ -205,7 +210,7 @@
 &trans  &kp PG_UP  &kp LC(LEFT_ARROW)  &kp UP_ARROW    &kp LC(RIGHT)  &trans       &trans  &kp LA(LEFT_ARROW)  &kp LA(RIGHT)  &shiftaltctrl  &altctrl  &trans
 &trans  &trans     &kp LEFT_ARROW      &kp DOWN_ARROW  &kp RIGHT      &trans       &trans  &trans              &trans         &trans         &trans    &trans
 &trans  &trans     &kp LC(X)           &kp LC(C)       &trans         &kp LC(V)    &trans  &shiftalttab        &alttab        &trans         &trans    &trans
-                                       &trans          &trans         &trans       &trans  &trans              &trans
+                                       &trans          &trans         &trans       &trans  &kp TAB             &trans
             >;
         };
 
