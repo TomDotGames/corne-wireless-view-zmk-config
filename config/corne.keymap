@@ -169,7 +169,7 @@
 
             display-name = "Base";
             bindings = <
-&kp GRAVE   &kp Q  &kp W  &kp F     &kp P                   &kp B                  &kp J               &kp L                         &kp U                   &kp Y                       &none         &none
+&kp X       &kp Q  &kp W  &kp F     &kp P                   &kp B                  &kp J               &kp L                         &kp U                   &kp Y                       &none         &none
 &kp DELETE  &kp A  &kp R  &kp S     &kp T                   &kp G                  &kp M               &homerow_right RIGHT_SHIFT N  &homerow_right RCTRL E  &homerow_right RIGHT_ALT I  &kp O         &none
 &kp CAPS    &kp Z  &kp X  &kp C     &kp D                   &kp V                  &kp K               &kp H                         &kp COMMA               &kp DOT                     &kp QUESTION  &none
                           &kp LGUI  &thumb_mod 3 BACKSPACE  &thumb_mod 4 ESCAPE    &thumb_mod 6 ENTER  &thumb_mod 2 SPACE            &tap_caps
