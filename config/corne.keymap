@@ -61,11 +61,98 @@
     };
 
     macros {
+        altctrl: altctrl {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &mo 5>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp LCTRL &mo 5>;
+
+            label = "ALTCTRL";
+        };
+
         shiftaltctrl: shiftaltctrl {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LSHIFT &mo 5>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp LCTRL &mo 5>;
+
             label = "SHIFTALTCTRL";
+        };
+
+        alttab: alttab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT &mo 5>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp LEFT_ALT &mo 5>;
+
+            label = "ALTTAB";
+        };
+
+        shiftalttab: shiftalttab {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHIFT &kp LEFT_ALT &mo 5>,
+                <&macro_tap>,
+                <&kp TAB>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp LSHIFT &kp LEFT_ALT &mo 5>;
+
+            label = "SHIFTALTTAB";
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        semicolon {
+            bindings = <&kp SEMI>;
+            key-positions = <7 19>;
+        };
+
+        colon {
+            bindings = <&kp COLON>;
+            key-positions = <20 8>;
+        };
+
+        forwardslash {
+            bindings = <&kp SLASH>;
+            key-positions = <31 19>;
+        };
+
+        backslash {
+            bindings = <&kp BACKSLASH>;
+            key-positions = <32 20>;
+        };
+
+        quote {
+            bindings = <&kp SINGLE_QUOTE>;
+            key-positions = <16 4>;
+        };
+
+        doublequote {
+            bindings = <&kp DOUBLE_QUOTES>;
+            key-positions = <15 3>;
         };
     };
 
@@ -115,9 +202,9 @@
 
         nav {
             bindings = <
-&trans  &kp PG_UP  &kp LC(LEFT_ARROW)  &kp UP_ARROW    &kp LC(RIGHT)  &trans       &trans  &kp LA(LEFT_ARROW)  &kp LA(RIGHT)  &trans  &trans  &trans
-&trans  &trans     &kp LEFT_ARROW      &kp DOWN_ARROW  &kp RIGHT      &trans       &trans  &trans              &trans         &trans  &trans  &trans
-&trans  &trans     &kp LC(X)           &kp LC(C)       &trans         &kp LC(V)    &trans  &trans              &trans         &trans  &trans  &trans
+&trans  &kp PG_UP  &kp LC(LEFT_ARROW)  &kp UP_ARROW    &kp LC(RIGHT)  &trans       &trans  &kp LA(LEFT_ARROW)  &kp LA(RIGHT)  &shiftaltctrl  &altctrl  &trans
+&trans  &trans     &kp LEFT_ARROW      &kp DOWN_ARROW  &kp RIGHT      &trans       &trans  &trans              &trans         &trans         &trans    &trans
+&trans  &trans     &kp LC(X)           &kp LC(C)       &trans         &kp LC(V)    &trans  &shiftalttab        &alttab        &trans         &trans    &trans
                                        &trans          &trans         &trans       &trans  &trans              &trans
             >;
         };
