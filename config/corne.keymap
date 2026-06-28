@@ -51,6 +51,15 @@
         };
     };
 
+    macros {
+        shiftaltctrl: shiftaltctrl {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "SHIFTALTCTRL";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -92,6 +101,15 @@
 &none  &kp HASH    &kp STAR  &kp PLUS       &kp EQUAL         &none    &none  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AMPS  &none  &none
 &none  &kp AT      &kp EXCL  &kp PERCENT    &kp UNDER         &none    &none  &kp LEFT_BRACE        &kp RIGHT_BRACE        &none     &none  &none
                              &kp LESS_THAN  &kp GREATER_THAN  &none    &none  &none                 &none
+            >;
+        };
+
+        nav {
+            bindings = <
+&trans  &trans  &kp LC(LEFT_ARROW)  &kp UP_ARROW    &kp LC(RIGHT)  &trans       &trans  &kp LA(LEFT_ARROW)  &kp LA(RIGHT)  &trans  &trans  &trans
+&trans  &trans  &kp LEFT_ARROW      &kp DOWN_ARROW  &kp RIGHT      &trans       &trans  &trans              &trans         &trans  &trans  &trans
+&trans  &trans  &kp LC(X)           &kp LC(C)       &trans         &kp LC(V)    &trans  &trans              &trans         &trans  &trans  &trans
+                                    &trans          &trans         &trans       &trans  &trans              &trans
             >;
         };
     };
